@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        carousel of images
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+         .slideshowContainer {
+            position: relative;
+            top:60px;
+            left:350px;
+        }
+    </style>
+    </head>
+
+<body>
+        <div class="slideshowContainer">
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <br><br>
+                    <img src="terrarium.png" style="width:10%">
+                    <div class="text">terrarium</div>
+                </div>
+                          
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <br><br>
+                    <img src="carpet.png" style="width:16.5%">
+                    <div class="text">Carpet Roll</div>
+                </div>
+                          
+                <div class="mySlides fade">
+                  <div class="numbertext"></div>
+                  <br><br>
+                  <img src="fastDelivery.png" style="width:10%">
+                  <div class="text">Fast Delivery</div>
+                </div>
+    
+            </div>
+    
+            <br>
+    
+            <div style="text-align:center">
+                 <span class="dot"></span> 
+                 <span class="dot"></span> 
+                 <span class="dot"></span> 
+            </div>
+    
+            <script>
+                    var slideIndex = 0;
+                    showSlides();
+                    
+                    function showSlides() {
+                      var i;
+                      var slides = document.getElementsByClassName("mySlides");
+                      var dots = document.getElementsByClassName("dot");
+                      for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                      }
+                      slideIndex++;
+                      if (slideIndex > slides.length) {slideIndex = 1}    
+                      for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";  
+                      dots[slideIndex-1].className += " active";
+                      setTimeout(showSlides, 3000); 
+                    }
+                    </script>
+                
+</body>
+</html>
